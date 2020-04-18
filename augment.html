@@ -24,7 +24,12 @@
   font-family: 'Oswald';
   text-align: center;
 }
-
+.bottomleft{
+  float: left;
+}
+.bottomright{
+  float: right;
+}
 </style>
 </head>
 
@@ -55,8 +60,8 @@
   <div id="main" class="w3-display-container">
     <p id="namie"></p>
     <p id="deta"></p><br>
-    <p id="rem" class="w3-display-bottomleft">Remove content</p>
-    <p class="w3-display-bottomright fixed"> <a id="more" style="text-decoration:none;" target="_blank">More INFO</a> </p>
+    <p id="rem" class="bottomleft">Remove content</p>
+    <p class="bottomright"> <a id="more" style="text-decoration:none;" target="_blank">More INFO</a> </p>
   </div>
 </div>
   <script>
@@ -67,7 +72,7 @@
   var mor=document.getElementById('more')
 
   rem.addEventListener('click',function(e){
-    main.setAttribute("class","w3-display-container")
+    main.setAttribute("class","")
   })
 
 
