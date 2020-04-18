@@ -72,7 +72,7 @@
 
   function changeVal(nameee){
     par.innerHTML=nameee;
-    main.setAttribute("class","fixed w3-display-bottommiddle")
+    main.setAttribute("class","fixed")
     var inf =new XMLHttpRequest();
   inf.open('GET','https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch='+nameee,false);
   inf.send(null);
