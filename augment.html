@@ -15,6 +15,7 @@
 .fixed {
   padding: 5px;
   bottom: 10px;
+  position: fixed;
   border: 3px solid white;
   border-style: dashed;
   background-color: rgba(0,0,0,0.75);
@@ -55,7 +56,7 @@
     <p id="namie"></p>
     <p id="deta"></p><br>
     <p id="rem" class="w3-display-bottomleft">Remove content</p>
-    <p class="w3-display-bottomright fixed"> <a id="more" style="text-decoration:none;" target="_blank">More INFO</a> </p>
+    <p class="w3-display-bottomright"> <a id="more" style="text-decoration:none;" target="_blank">More INFO</a> </p>
   </div>
 </div>
   <script>
@@ -72,7 +73,7 @@
 
   function changeVal(nameee){
     par.innerHTML=nameee;
-    main.setAttribute("class","fixed w3-display-bottommiddle")
+    main.setAttribute("class","fixed")
     var inf =new XMLHttpRequest();
   inf.open('GET','https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch='+nameee,false);
   inf.send(null);
